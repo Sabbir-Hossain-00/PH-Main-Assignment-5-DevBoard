@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- tailwind cmd -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="container mx-auto px-4 md:px-6 lg:px-8 xl:px-10 py-6">
+        <nav class="md:flex space-y-4 md:space-y-0 justify-between items-center bg-white p-6 rounded-md">
+            <!-- nav left -->
+             <div class="flex  justify-center gap-2 items-center">
+                <!-- logo -->
+                 <div>
+                    <img class="w-full" src="assets/logo.png" alt="">
+                 </div>
+                <!-- logo-name -->
+                 <div>
+                    <h1 class="text-3xl font-bold"><span class="font-normal">Dev</span>Board</h1>
+                 </div>
+             </div>
+            <!-- nav right -->
+             <div class="flex justify-center items-center gap-6">
+                <!-- nav button -->
+                 <button id="back-to-desk" class="bg-[#3752FD] rounded-md px-4 py-2 text-white cursor-pointer">Back to DEsk
+                 </button>
+             </div>
+        </nav>
+    </header>
+
+    <script src="script/blog.js"></script>
+</body>
+</html>
