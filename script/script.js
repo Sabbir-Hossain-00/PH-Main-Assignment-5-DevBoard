@@ -29,13 +29,14 @@ const history = document.getElementById("history");
 
 
 
+
 const showHistory = (cardTitle)=>{
     const div = document.createElement("div");
-    div.innerHTML = `
-    <p >You have Complete The Task ${cardTitle} at 12:48:15 PM</p>
-    `;
+    const time = new Date().toLocaleTimeString();
+    div.innerHTML = `<p class="bg-[#F4F7FF] p-3 rounded-lg">You have Complete The Task ${cardTitle} at ${time}</p>`;
     history.append(div);
 }
+
 
 
 
@@ -84,6 +85,10 @@ const allTaskCompletedAlert = ()=>{
         alert("all task is completed");
     }
 }
+
+
+
+
 
 
 for(let btn of completedBtns){
