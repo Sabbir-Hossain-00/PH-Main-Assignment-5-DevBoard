@@ -5,6 +5,20 @@ document.getElementById("discover").addEventListener("click",()=>{
 
 
 
+const showingDate = ()=>{
+
+    const date = document.getElementById("date");
+    const currentDate = new Date().toDateString();
+    const div = document.createElement("div");
+    div.innerHTML = `
+     <h1 class = "text-xl font-bold">${currentDate}</h1>
+    ` ;
+    date.append(div);
+}
+showingDate();
+
+
+
 document.getElementById("color-change-btn").addEventListener("click",()=>{
 
     const hexColor = "abcdef0123456789";
@@ -55,9 +69,9 @@ const decrementTaskAssigned = ()=>{
 
 
 
-let checkList = 25 ;
+let checkList = 23 ;
 const incrementCheckbox = ()=>{
-    if(checkList >= 31){
+    if(checkList >= 29){
         return false ;
     }else{
         const checkBox = document.getElementById("check-box");
@@ -82,7 +96,7 @@ let count = 0 ;
 const allTaskCompletedAlert = ()=>{
     count ++ ;
     if(count === 6){
-        alert("all task is completed");
+        alert("Congrates!!! You have completed all the current task");
     }
 }
 
@@ -94,7 +108,7 @@ const allTaskCompletedAlert = ()=>{
 for(let btn of completedBtns){
 
     btn.addEventListener("click",(event)=>{
-        alert("this task is completed");
+        alert("Board updated Successfully");
         const cardTitle = event.target.parentElement.previousSibling.parentElement.firstChild.nextSibling.nextSibling.nextSibling.innerText ;
 
         const thisBtn = event.target ;
